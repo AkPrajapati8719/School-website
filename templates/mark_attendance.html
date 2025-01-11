@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Mark Attendance for Class {{ class }}</h2>
+        <a href="/view_attendance" class="btn btn-primary mb-3">View Attendance</a>
+        <a href="/teacher_details" class="btn btn-primary mb-3 ">Back</a>
+
+        <!-- Class Selection Form -->
+        <form method="GET" class="mb-3">
+            <div class="form-group">
+                <label for="class">Select Class:</label>
+                <select name="class" class="form-control" onchange="this.form.submit()">
+                    <option value="1st" {% if class == '1st' %}selected{% endif %}>1st</option>
+                    <option value="2nd" {% if class == '2nd' %}selected{% endif %}>2nd</option>
+                    <option value="3rd" {% if class == '3rd' %}selected{% endif %}>3rd</option>
+                    <option value="4th" {% if class == '4th' %}selected{% endif %}>4th</option>
+                    <option value="5th" {% if class == '5th' %}selected{% endif %}>5th</option>
+                    <option value="6th" {% if class == '6th' %}selected{% endif %}>6th</option>
+                    <option value="7th" {% if class == '7th' %}selected{% endif %}>7th</option>
+                    <option value="8th" {% if class == '8th' %}selected{% endif %}>8th</option>
+                    <option value="9th" {% if class == '9th' %}selected{% endif %}>9th</option>
+                    <option value="10th" {% if class == '10th' %}selected{% endif %}>10th</option>
+                    <option value="11th" {% if class == '11th' %}selected{% endif %}>11th</option>
+                    <option value="12th" {% if class == '12th' %}selected{% endif %}>12th</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- Attendance Marking Form -->
+        <form method="POST" class="mb-3">
+            {% csrf_token %}
+            <input type="hidden" name="student_class" value="{{ class }}">
+
+            <!-- Table for marking attendance -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.student_id }}</td>
+                        <td>
+                            <select name="status_{{ student.id }}" class="form-control">
+                                <option value="P">Present</option>
+                                <option value="A">Absent</option>
+                                <option value="L">Leave</option>
+                            </select>
+                            <input type="hidden" name="student_id_{{ student.id }}" value="{{ student.id }}">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Submit button -->
+            <button type="submit" name="mark_attendance" class="btn btn-success">Submit Attendance</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

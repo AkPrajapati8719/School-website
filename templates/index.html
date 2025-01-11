@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+  <!-- Fav Icon is here -->
+  <link rel="shortcut icon" href="static/imagesSchool/logo2.jpg" type="images/x-icon" />
+
+
+  <!-- Bootstrap cdn -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- custom css -->
+
+  <link rel="stylesheet" href="static/style2.css">
+  <!-- animation link -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- font awsome cdn -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- On scroll Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" id="navbar-brand" href="/"><img class="rounded-circle" height="60px" src="static/imagesSchool/logo2.jpg" alt="Vivekanand VIdhya Vihar"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about__Us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact__Us">Contact</a>
+          </li>
+          <!-- Dropdown for Login -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/login_student">Student</a></li>
+              <li><a class="dropdown-item" href="/teacher_login">Teacher</a></li>
+              <li><a class="dropdown-item" href="admin/">Director</a></li>
+              <li><a class="dropdown-item" href="admin/">Authorised Person</a></li>
+              <!--
+              <li><a class="dropdown-item" href="/teacher_list">teacher_list</a></li>
+              <li><a class="dropdown-item" href="/student_list">student_list</a></li>
+              <li><a class="dropdown-item" href="/view_student">view_student</a></li>
+              <li><a class="dropdown-item" href="/add_student">add_student</a></li>
+              <li><a class="dropdown-item" href="/teacher_detail">teacher_detail</a></li>
+              <li><a class="dropdown-item" href="/mark_attendance">mark_attendance</a></li>
+              <li><a class="dropdown-item" href="/view_attendance">view_attendance</a></li>    -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar 2 that is for the brand names -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light nv2-navbar">
+    <div class="container-fluid">
+        <!-- Brand Name -->
+        <a class="navbar-brand nv2-brand" id="brand-name" href="#">Vivekanand Vidhya Vihar School</a>
+    </div>
+  </nav>
+
+  <!-- Carousel Component -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+    <!-- Carousel indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    
+    <!-- Carousel inner content -->
+    <div class="carousel-inner cn-carousel-inner">
+      <!-- First Carousel Item -->
+      <div class="carousel-item active cn-carousel-item">
+        <img src="static/imagesSchool/sch.jpg" class="d-block w-100 cn-carousel-image" alt="schoolImage">
+        <div class="carousel-caption d-none d-md-block cn-carousel-caption">
+          <h5>Welcome to Vivekanand Vidhya Vihar</h5>
+          <p>Where education meets excellence. Join us to shape your future.</p>
+        </div>
+      </div>
+  
+      <!-- Second Carousel Item -->
+      <div class="carousel-item cn-carousel-item">
+        <img src="static/imagesSchool/sch3.webp" class="d-block w-100 cn-carousel-image" alt="schoolImage">
+        <div class="carousel-caption d-none d-md-block cn-carousel-caption">
+          <h5>Innovative Learning at its Best</h5>
+          <p>Experience hands-on learning with state-of-the-art facilities.</p>
+        </div>
+      </div>
+  
+      <!-- Third Carousel Item -->
+      <div class="carousel-item cn-carousel-item">
+        <img src="https://media.gettyimages.com/id/504675200/photo/bhopal-india-school-students-participate-in-surya-namaskar-function-organized-at-bab-e-ali.jpg?s=612x612&w=0&k=20&c=d2UM-Sha8PCDd0LXeGUlXqyq-2mdEvKsHPQRZP9d6qA=" class="d-block w-100 cn-carousel-image" alt="schoolImage">
+        <div class="carousel-caption d-none d-md-block cn-carousel-caption">
+          <h5>Empowering Young Minds</h5>
+          <p>Providing a nurturing environment to help students succeed.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+
+  <!-- Main Content -->
+  <div class="container mt-3 text-center ">
+    <h2 class="animate__animated animate__bounce">Welcome to Our School</h2>
+    <p> Write the content and add more something interested or popular in your school lorem10 Our school offers the best education, facilities, and opportunities to grow.</p>
+    <p>Our school offers the best education, facilities, and opportunities to grow.</p>
+  </div>
+   <!-- About Us Section Starts here -->
+<!-- ========================================== -->
+
+<!-- About Content -->
+<div class="container mt-3 text-center" >
+  <h2 data-aos="fade-up" id="about__Us">About Our School</h2>
+  <p data-aos="fade-up-right">We are dedicated to providing quality education to all our students. Our teachers are passionate about helping students excel academically and personally.</p>
+</div>
+
+  <!-- card of the Authers -->
+<!--CEO's Sectio start here-->
+<div class="container p-5">
+  <h2 class="card-title">Authorities of our School</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col"  data-aos="fade-down-right">
+      <div class="card h-100">
+        <img src="static/imagesSchool/Albert.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Prof. Albert</h5>
+          <p class="text-muted">Fouder OF School</p>
+          <p class="card-text">
+            Professor Albert, a visionary educator with a passion for
+            inspiring minds and driving innovation in learning. With over
+            15 years of teaching experience, Professor Albert specializes
+            in [subject/field, e.g., Physics, Artificial Intelligence,
+            etc.]
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col"  data-aos="fade-down-left">
+      <div class="card h-100">
+        <img
+          src="static/imagesSchool/Smith.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Prof. Daniel</h5>
+          <p class="text-muted">Co-Founder of School</p>
+          <p class="card-text">
+            Professor Daniel, a distinguished educator and thought leader
+            dedicated to transforming education through innovation and
+            insight. With a career spanning over a decade, Professor
+            Daniel specializes in [subject/field, e.g., Mathematics,
+            Computer Science, etc.]
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col"  data-aos="fade-up">
+      <div class="card h-100">
+        <img src="static/imagesSchool/Daniel.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Prof. Smith</h5>
+          <p class="text-muted">School Director</p>
+          <p class="card-text">
+            Professor Smith, a dedicated educator and expert in
+            [subject/field, e.g., Economics, Environmental Science, etc.],
+            with a mission to inspire and empower learners. With over [X
+            years] of teaching experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CEO's Sectio end here-->
+
+
+  <!-- EVENT SECTION STARTS HERE -->
+<!-- ================================ -->
+
+<div class="container mt-3  "data-aos="flip-right" style="max-width: 810px;">
+  <h2 class="card-title p-3" id="events">Events</h2>
+  <div class="card border-info mb-3 animate__animated animate__bounce"  >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="static/imagesSchool/carniva.jpg"
+          class="img-fluid rounded-start card-img"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Carnival</h5>
+          <p class="card-text">
+            Carnival games are an essential part of the fun and excitement
+            during such events. These games are designed to entertain
+            students, parents, and teachers while fostering a sense of
+            enjoyment and community.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary"
+              >Last updated 3 mins ago</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-info mb-3 " data-aos="fade-up-left" style="max-width: 810px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="static/imagesSchool/sports.jpg"
+          class="img-fluid rounded-start card-img"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Sports Merathon</h5>
+          <p class="card-text">
+            Promotes fitness and a healthy lifestyle. Encourages a spirit
+            of perseverance and teamwork.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary"
+              >Last updated 3 mins ago</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-info mb-3" data-aos="fade-up-right" style="max-width: 810px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="static/imagesSchool/eventCrd1.jpg"
+          class="img-fluid rounded-start card-img"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Telent Show</h5>
+          <p class="card-text">
+            A talent show is an event where participants showcase their
+            unique skills and abilities, such as singing, dancing, acting,
+            playing instruments, or performing magic tricks.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary"
+              >Last updated 3 mins ago</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Events Section ends here-->
+  <div class="container mt-5" data-aos="fade-up" >
+      <h2> Our Events</h2>
+      <p class="paraStyle">The school prides itself on its vibrant and dynamic calendar filled with multiple events throughout the year.
+          Each celebration is meticulously planned to ensure students gain a rich and diverse experience outside the
+          classroom. From cultural festivals showcasing traditional dances and music to science fairs where young
+          minds exhibit their innovative projects, every event is an opportunity for learning and growth. Sports days
+          foster a spirit of teamwork and healthy competition, while art exhibitions provide a platform for creative
+          expression. Additionally, the school organizes community service projects, encouraging students to
+          contribute positively to society. These events are not only a celebration of talents and skills but also a
+          chance to strengthen the sense of community and camaraderie among students, teachers, and parents.</p>
+  </div>
+
+
+     <!-- CONTACT US  -->
+<!-- ======================== -->
+
+<h2 class="contactUs mt-4" id="contact__Us" data-aos="fade-up">Contact Us</h2>
+<div class="container mt-5 formControl">
+    <h2 class="formCtc">Contact Us</h2>
+    <form id="contact-form" data-aos="flip-up" method="post" action="/contact">
+      {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Your Name " name="name" required>
+        </div>
+    
+        <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+            <!-- <small class="form-text text-muted">Enter a valid phone number (e.g., +1234567890).</small> -->
+        </div>
+        <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+    
+    <!-- Mobile number as clickable link -->
+    <div class="mt-4">
+        <p>If you'd prefer to reach us by phone, you can call us directly at: 
+            <a href="tel:+1234567890" class="btn btn-link">+1234567890</a>
+        </p>
+    </div>
+</div>
+
+  <!-- FOOTER CONTENT STARTS HERE -->
+  <!-- ================================= -->
+  <div class="container-fluid my-5 px-0  mb-2">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-dark ft-bg-light">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-between p-4 text-white ft-bg-primary">
+        <!-- Left -->
+        <div class="me-5">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div>
+          <a href="https://www.facebook.com" class="text-white me-4">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com" class="text-white me-4">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com" class="text-white me-4">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" class="text-white me-4">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links -->
+      <section class="ft-links-section">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Google Map Section -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="location_image">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.121839051694!2d73.94508507401329!3d18.80339668217666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c428f8fd68fbd%3A0x2155716d572d4f8!2sBhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1732121013928!5m2!1sen!2sin"
+                  width="100%" height="180" style="border-radius:10px;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column: Authority -->
+            <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Authority</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto ft-line" />
+              <p><h6>Founder Name</h6></p>
+              <p><h6>Co-Founder Name</h6></p>
+              <p><h6>Director Name</h6></p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column: Useful links -->
+            <div class="col-12 col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto ft-line" />
+              <p><a href="/" class="text-dark">Home</a></p>
+              <p><a href="#about__Us" class="text-dark">About Us</a></p>
+              <p><a href="#contact__Us" class="text-dark">Contact Us</a></p>
+              <p><a href="#events" class="text-dark">Events</a></p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column: Contact -->
+            <div class="col-12 col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto ft-line" />
+              <p><i class="fas fa-home mr-3"></i> Bhopal sector 23 </p>
+              <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3 ft-bg-dark">
+        &copy; 2024 School Name. All rights reserved.
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+  <!-- On Scroll Animation link  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- This link is for the brand names only -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="/school5/static/script.js"></script>
+
+  <script>
+    function changeBrandName() {
+    const brands = ["S.V. Convent School", "Vivekanand Vidhya Vihar School"];
+    let currentBrandIndex = 0;
+    const brandElement = document.getElementById("brand-name");
+
+    // Change brand name every 3 seconds
+    setInterval(function() {
+        brandElement.textContent = brands[currentBrandIndex];
+        currentBrandIndex = (currentBrandIndex + 1) % brands.length;
+    }, 3000); // Change every 3 seconds
+}
+
+// Call the function when the page loads
+window.onload = changeBrandName;
+
+  </script>
+  
+</body>
+
+</html>

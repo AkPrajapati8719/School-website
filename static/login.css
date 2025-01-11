@@ -1,0 +1,183 @@
+    /* Student login form styling  */
+/* <===============================> */
+
+body {
+    font-family: Arial, sans-serif;
+    background:url(imagesSchool/background.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background-color:rgb(255, 254, 254);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formHeading{
+    text-align: center;
+}
+
+
+.formHeading:hover{
+    color: #2c1cb4;
+}
+.container:hover{
+    border: yellow 4px solid;
+}
+
+.stuLogin {
+    text-align: center;
+    color: #363632;
+}
+
+.stuLogin:hover{
+    color: rgb(163, 161, 18);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #000000;
+}
+
+input[type="text"],input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #800000;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.stbutton {
+    padding: 10px 20px;
+    background-color: #1900ff;
+    color:black;
+    border: none;
+    border-radius: 5px;
+    font-style: italic;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.stbutton:hover {
+    background-color: yellow;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+.forgetSignUp{
+    position: relative;
+}
+.forgot-password{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.forgot-password a, .forgot-password span{
+    position: absolute;
+    text-decoration: none;
+    padding-left: 3px;
+    color: #363632;
+}
+
+.forgot-password:hover,.forgot-password a:hover{
+    color: rgb(0, 17, 255);
+    font-size: 20px;
+}
+
+/*   teachers Sign Up form style */
+/* <====================================> */
+
+
+.form-title {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  .form-group label {
+    font-weight: 500;
+    color: #333;
+  }
+
+  .form-control {
+    border-radius: 8px;
+  }
+
+  .btn-primary {
+    width: 50%;
+    background-color: #0400ff;
+    border-color: #0400ff;
+    border-radius: 8px;
+  }
+
+  .btn-primary:hover {
+    color: rgb(0, 0, 0);
+    background-color: hsl(59, 100%, 50%);
+    border-color: hsl(59, 100%, 50%);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+  }
+
+  .password-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .forgot-password {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+
+  /* list styles of the student and teachers */
+
+  
+.st-heading {
+    color: #333;
+    font-size: 2rem;
+}
+
+.st-thead {
+    background-color: #5247e7; /* Faith - Soft Blue */
+    color: white;
+}
+
+.st-tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+}

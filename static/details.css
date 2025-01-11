@@ -1,0 +1,252 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    width: 50%;
+  }
+
+  /* navbar style for the login form */
+
+  .myLogo{
+    padding-bottom: 7px;
+  }
+  
+/* Login Form Card */
+#loginForm {
+    max-width: 400px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm:hover {
+    border: yellow 4px solid;
+}
+
+.formHeading {
+    color: #161b20;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formHeading:hover {
+    color: #2c1cb4;
+}
+
+/* Student Login form */
+.stuLogin {
+    text-align: center;
+    color: #363632;
+}
+
+.stuLogin:hover {
+    color: rgb(163, 161, 18);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #000000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #800000;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.stbutton {
+    padding: 10px 20px;
+    background-color: #1900ff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-style: italic;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.stbutton:hover {
+    background-color: yellow;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.forgot-password a,
+.forgot-password span {
+    position: absolute;
+    text-decoration: none;
+    padding-left: 3px;
+    color: #363632;
+}
+
+.forgot-password:hover,
+.forgot-password a:hover {
+    color: rgb(0, 17, 255);
+    font-size: 20px;
+}
+
+/* Director and Teacher Details */
+.director-details, .teacher-details, .student-details {
+    position: absolute;
+    width: 500px;
+    display: flex;
+    margin-left: 27%;
+    margin-right: 30%;
+    justify-content: center;
+    display: none;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.director-details:hover,
+.teacher-details:hover,
+.student-details:hover {
+    border: 4px solid yellow;
+}
+
+.director-details h2,
+.teacher-details h2,
+.student-details h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+    padding: 15px;
+    color: #555;
+}
+
+.list-group-item strong {
+    color: #007bff;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: #354edc;
+    color: rgb(255, 255, 255);
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #130f0f;
+    color: #fffb00;
+}
+
+/* Teacher Sign-Up form */
+.form-title {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    width: 50%;
+    background-color: #0400ff;
+    border-color: #0400ff;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    color: rgb(0, 0, 0);
+    background-color: hsl(59, 100%, 50%);
+    border-color: hsl(59, 100%, 50%);
+}
+
+
+.container3 {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 70px;
+    margin:auto;
+  }
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 767px) {
+    .formHeading {
+        font-size: 2rem;
+    }
+
+    #loginForm {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .director-details,
+    .teacher-details,
+    .student-details {
+        padding: 20px;
+    }
+
+    .list-group-item {
+        font-size: 1rem;
+    }
+}
+
+/* home link on the login pages */
+.MyHome{
+    position: absolute;
+    display: flex;
+}
+
+.MyHome a{
+    color: #2b2b26;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+
+
