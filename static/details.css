@@ -4,8 +4,8 @@
     padding: 0;
 }
 body {
-    font-family: Arial, sans-serif;
-    width: 50%;
+    font-family:'roboto condenced',sens-serif;
+    font-weight: 400; 
   }
 
   /* navbar style for the login form */
