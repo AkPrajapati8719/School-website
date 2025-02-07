@@ -2,7 +2,7 @@ from django.contrib import admin
 from mySch.models import Contact
 from mySch.models import Student
 from mySch.models import Teacher
-from mySch.models import Attendance
+from mySch.models import Attendance, Teacher_Attendance
 from mySch.models import Account
 # from mySch.models import StudentAuth
 
@@ -30,6 +30,17 @@ class AttendanceAdmin(admin.ModelAdmin):
     list_display = ('student', 'date', 'status')
     list_filter = ('date', 'status')
     search_fields = ('student__name', 'student__student_id')
+    ordering = ('-date',)
+
+    
+# admin.site.register(Attendance)
+# admin.site.register(Teacher_Attendance)
+
+@admin.register(Teacher_Attendance)
+class Teacher_AttendanceAdmin(admin.ModelAdmin):
+    list_display = ('teacher', 'date', 'status')
+    list_filter = ('date', 'status')
+    search_fields = ('teacher__name', 'teacher__teacher_id')
     ordering = ('-date',)
 # admin.site.register(Account)
 

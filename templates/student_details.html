@@ -87,8 +87,10 @@
 
     <div class="container form-div">
       <h4 class="mb-4 text-center">Student Details</h4>
-      <div class="card-body">
+      <div class="card-body m-5 mb-0 mt-0">
         {% csrf_token %}
+
+        <!-- Student details -->
         <h3 class="card-title mb-2">
           Name: <strong>{{ student.name }}</strong>
         </h3>
@@ -114,6 +116,53 @@
           Due Fees: <strong>₹{{ student.due_fees }}</strong>
         </p>
         <p class="card-t">Age: <strong>{{ student.age }} years</strong></p>
+        <p class="card-t">
+          Monthly Test: <strong>{{ student.monthly_result }}</strong>
+        </p>
+        <!-- Display Result Photo to Student-->
+        {% if student.result_photo %}
+        <h3>Result Photo</h3>
+        <img
+          src="{{ student.result_photo.url }}"
+          alt="Result Photo"
+          style="max-width: 200px; height: auto"
+        />
+        {% else %}
+        <p>No result photo available.</p>
+        {% endif %}
+
+        <!--attendance view here-->
+        <h3>Attendance Records</h3>
+        <table class="table table-bordered" style="border: 2px solid black">
+          <thead>
+            <tr>
+              <th class="border" style="border: 2px solid black">Date</th>
+              <th class="border" style="border: 2px solid black">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for record in attendance_records %}
+            <tr>
+              <td class="border" style="border: 2px solid black">
+                {{ record.date }}
+              </td>
+              <td class="border" style="border: 2px solid black">
+                {{ record.status }}
+              </td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td
+                colspan="2"
+                class="border"
+                style="border: 2px solid black; text-align: center"
+              >
+                No attendance records found.
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
       <a href="/" class="btn btn-secondary mt-4">Back to Home</a>
     </div>

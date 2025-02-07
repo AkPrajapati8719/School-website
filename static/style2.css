@@ -1,24 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .navbar {
-    background-color: #007bff;
-    height: 70px;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #ffee00 !important;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #7a7564 !important;
-  }
+  font-family:'roboto condenced',sens-serif;
+  font-weight: 400; 
+}
 
+.navbar {
+  background-color: #1777dd;
+  height: 70px;
+}
 
-  /* Nav bar 2 styles */
+.navbar-nav .nav-link {
+  color: #000000 !important;
+  font-size: 18px;
+}
 
-  /* Custom styles (optional) */
+.navbar-nav .nav-link:hover {
+  color: #7a7564 !important;
+}
 
 /* Styling the navbar with the nv2 prefix */
 .nv2-navbar {
@@ -26,7 +23,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Center align navbar brand with the nv2 prefix */
 .nv2-navbar .container-fluid {
   display: flex;
   justify-content: center;
@@ -36,9 +32,7 @@ body {
   text-align: center;
 }
 
-
-
-  /* Custom Styles */
+/* Custom Styles */
 .cn-carousel-inner {
   max-height: 500px; 
 }
@@ -72,81 +66,68 @@ body {
   }
 }
 
-/* For very small screens like mobile, further reduce image size */
 @media (max-width: 576px) {
   .cn-carousel-image {
     height: 40vh;
   }
 }
 
-  
+/* Footer Styling */
+.ft-bg-light {
+  background-color: #ECEFF1;
+}
 
-  /* footer styling */
+.ft-bg-primary {
+  background-color: #007bff;
+}
 
-  /* Custom Styles */
-  .ft-bg-light {
-    background-color: #ECEFF1;
-  }
-  
-  .ft-bg-primary {
-    background-color: #007bff;
+.ft-bg-dark {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
-  }
-  
-  .ft-bg-dark {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+.ft-line {
+  width: 60px;
+  background-color: #7c4dff;
+  height: 2px;
+}
 
-  .ft-line {
-    width: 60px;
-    background-color: #7c4dff;
-    height: 2px;
-  }
+.ft-links-section {
+  margin-top: 5rem;
+}
 
-  .ft-links-section {
-    margin-top: 5rem;
-  }
+/* Full width of the viewport */
+.container-fluid {
+  width: 100%;
+  padding: 0;
+}
 
-  /* Full width of the viewport */
-  .container-fluid {
-    width: 100%;
-    padding: 0;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .ft-links-section .row {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .ft-links-section .col-md-3,
-    .ft-links-section .col-md-2,
-    .ft-links-section .col-md-4 {
-      margin-bottom: 1.5rem;
-    }
-    
-    /* Adjusting iframe size on smaller screens */
-    .location_image iframe {
-      height: 150px;
-    }
+@media (max-width: 768px) {
+  .ft-links-section .row {
+    flex-direction: column;
+    text-align: center;
   }
 
-  /* Social media icons styling */
-  .ft-social-icons a {
-    font-size: 1.5rem;
+  .ft-links-section .col-md-3,
+  .ft-links-section .col-md-2,
+  .ft-links-section .col-md-4 {
+    margin-bottom: 1.5rem;
   }
 
-  .ft-social-icons a:hover {
-    color: #ffffff;
-    text-decoration: none;
+  .location_image iframe {
+    height: 150px;
   }
+}
 
+.ft-social-icons a {
+  font-size: 1.5rem;
+}
 
-  /* Contact form style */
+.ft-social-icons a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
 
-  
-/* Form control style */
+/* Contact Form Style */
 .formControl {
   max-width: 600px;
   margin: 0 auto;
@@ -156,7 +137,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: default;
 }
-
 
 .contactUs {
   text-align: center;
@@ -192,7 +172,6 @@ body {
   font-weight: bold;
 }
 
-
 .btn-link {
   color: #0f26f1;
   text-decoration: none;
@@ -206,8 +185,7 @@ body {
   display: none;
 }
 
-/* form to add for edit the student */
-
+/* Form to add or edit the student */
 .form-div {
   max-width: 600px;
   margin: 0 auto;
@@ -231,4 +209,86 @@ body {
   .form-label {
     font-size: 0.9rem;
   }
+}
+
+
+
+/* for the galaries of events and sports */
+/* Gallery container styling */
+
+.pic-gallery {
+    margin-top: 30px;
+}
+
+/* Common style for both photos and videos */
+.pic-photo,
+.pic-video {
+    margin-bottom: 15px;
+}
+
+/* Style for images and videos */
+.pic-photo img,
+.pic-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Container for flexbox grid */
+.pic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style for each gallery item */
+.pic-item {
+    margin: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+/* Hover effect for images and videos */
+.pic-item:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* Animation for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling the hover effect specifically for images */
+.pic-photo img {
+    transition: transform 0.3s ease;
+}
+
+/* Styling the hover effect specifically for videos */
+.pic-video video {
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects for scaling */
+.pic-item:hover img,
+.pic-item:hover video {
+    transform: scale(1.1);
+}
+
+/* Responsiveness - adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .pic-item {
+        flex: 1 1 48%;
+    }
+}
+
+@media (max-width: 576px) {
+    .pic-item {
+        flex: 1 1 100%;
+    }
 }

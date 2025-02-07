@@ -93,7 +93,7 @@
       <!-- Modal for adding student -->
       <div class="modal-body form-div">
         <h5 class="modal-title">Add Student</h5>
-        <form method="POST" action="/add_student">
+        <form method="POST" action="/add_student" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="mb-3">
             <label for="id_name" class="form-label">Name</label>
@@ -126,7 +126,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="id_contact" class="form-label">Student Id</label>
+            <label for="id_student_id" class="form-label">Student Id</label>
             <input
               type="text"
               class="form-control"
@@ -183,6 +183,27 @@
               id="id_age"
               name="age"
               required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="id_monthly_result" class="form-label"
+              >Monthly Result</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="id_monthly_result"
+              name="monthly_result"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="id_result_photo" class="form-label">Result Photo</label>
+            <input
+              type="file"
+              class="form-control"
+              id="id_result_photo"
+              name="result_photo"
             />
           </div>
           <button type="submit" class="btn btn-primary">Add Student</button>

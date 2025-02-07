@@ -2,6 +2,13 @@ from django.contrib import admin
 from django.urls import path,include
 from mySch import views
 
+# this uses to display the result_photos
+
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path
+from . import views
+
 urlpatterns = [
     path('', views.home,name="home"),
     # path('about', views.about,name="about"),
@@ -24,4 +31,14 @@ urlpatterns = [
     # for the students attendance
     path('mark_attendance/', views.mark_attendance, name='mark_attendance'),
     path('view_attendance/', views.view_attendance, name='view_attendance'),
+    # gallary contents here
+    path('event_gallary/', views.event_gallary, name='event_gallary'),
+    path('sport_gallary/', views.sport_gallary, name='sport_gallary'),
+    path('alumni_gallary/', views.alumni_gallary, name='alumni_gallary'),
 ]
+
+# it uses to display the result
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

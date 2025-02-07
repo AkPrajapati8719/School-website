@@ -23,7 +23,16 @@ from datetime import date
 
 def home(request):
     return render(request,'index.html')
-# about us
+# event gallary here
+def event_gallary(request):
+    return render(request,'event-gallary.html')
+# sport gallary here
+def sport_gallary(request):
+    return render(request,'sport-gallary.html')
+# alumni gallary here
+def alumni_gallary(request):
+    return render(request,'alumni-gallary.html')
+# about here
 # def about(request):
 #     return render(request,'about.html')
 # # our events
@@ -51,7 +60,10 @@ def add_student(request):
         total_fees = request.POST.get('total_fees')
         paid_fees = request.POST.get('paid_fees')
         due_fees = request.POST.get('due_fees')
-        age = request.POST.get('age')
+        age = int(request.POST.get('age'))
+        monthly_result= request.POST.get('monthly_result')
+        # Handle file upload for result_photo
+        result_photo = request.FILES.get('result_photo')  # Assuming it's in the form
 
         # Create a new student instance and save it to the database
         student = Student(
@@ -63,13 +75,18 @@ def add_student(request):
             total_fees=total_fees,
             paid_fees=paid_fees,
             due_fees=due_fees,
-            age=age
+            age=age,
+            result_photo=result_photo,
+            monthly_result=monthly_result # Ensure this field is included in the form
         )
         student.save()  
+        
+        # Add success message
         messages.success(request, 'Student added successfully!')
+        
+        return redirect('student_list')  # Redirect to a student list page or similar
 
-        return redirect('student_list') 
-    return render(request, 'add-student.html')  
+    return render(request, 'add-student.html')
 
 
 # list of the students on database
@@ -104,9 +121,17 @@ def login_student(request):
 def student_details(request):
     if request.user.is_authenticated:
         try:
-            # Try to fetch student data based on the logged-in username
+            # Fetch student data based on the logged-in username
             student = Student.objects.get(student_id=request.user.username)
-            return render(request, 'student_details.html', {'student': student})
+
+            # Fetch the attendance records for the student
+            attendance_records = Attendance.objects.filter(student=student)
+
+            # Pass the student and their attendance records to the template
+            return render(request, 'student_details.html', {
+                'student': student,
+                'attendance_records': attendance_records
+            })
         except Student.DoesNotExist:
             # If no student is found with the logged-in username, try fetching teacher data
             try:
@@ -116,8 +141,8 @@ def student_details(request):
                 # If neither a student nor a teacher is found, redirect to the login page
                 return redirect('login_student') 
     else:
-        return redirect('login_student')  # Redect if not logged in
-    
+        return redirect('login_student')  # Redirect if not logged in
+
 # log out page to the student
 @login_required
 def logout_student(request):
@@ -205,6 +230,7 @@ def mark_attendance(request):
         'students': students,
         'class': class_selected
     })
+
 # View for viewing attendance
 def view_attendance(request):
     class_selected = request.GET.get('class', '1st')  # Default to '1st' if no class is specified

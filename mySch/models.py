@@ -25,7 +25,8 @@ class Student(models.Model):
     paid_fees = models.DecimalField(max_digits=10, decimal_places=2)
     due_fees = models.DecimalField(max_digits=10, decimal_places=2)
     age = models.IntegerField()
-    
+    result_photo = models.ImageField(upload_to='result_photos/', null=True, blank=True)  # Add result photo field
+    monthly_result = models.IntegerField()
     def __str__(self):
         return f"{self.name} {self.student_id}"
 
@@ -56,10 +57,17 @@ class Attendance(models.Model):
     def __str__(self):
         return f"Attendance for {self.student.name} class {self.student.student_class}on {self.date} - {self.status}"
     
+# teacher attendace 
+class Teacher_Attendance(models.Model):
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)  # Reference to the Teacher model
+    date = models.DateField(default=timezone.now)  # The date of attendance
+    status = models.CharField(
+        max_length=1, 
+        choices=[('P', 'Present'), ('A', 'Absent'), ('L', 'Leave')],  # Attendance status options
+    )
 
-
-# for the accouns of the teacher and students
-from django.db import models
+    def __str__(self):
+        return f"Attendance for {self.teacher.name} {self.teacher.teacher_id} on {self.date} - {self.get_status_display()}"
 
 # Assuming the Student and Teacher models are already defined as shown in the original code
 
@@ -88,9 +96,9 @@ class Account(models.Model):
     def save(self, *args, **kwargs):
         # Ensure either the student or teacher is filled based on identity
         if self.identity == self.STUDENT:
-            self.teacher = None  # Nullify teacher if it's a student
+            self.teacher = None 
         elif self.identity == self.TEACHER:
-            self.student = None  # Nullify student if it's a teacher
+            self.student = None 
         super(Account, self).save(*args, **kwargs)
     
     def __str__(self):
