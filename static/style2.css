@@ -20,7 +20,7 @@ body {
 /* Styling the navbar with the nv2 prefix */
 .nv2-navbar {
   margin-top: 73px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .nv2-navbar .container-fluid {
